@@ -1,0 +1,20 @@
+[providers.docker]
+  endpoint = "tcp://socket-proxy:2375"
+  exposedByDefault = false
+
+[entryPoints]
+  [entryPoints.web]
+    address = ":80"
+
+  [entryPoints.web-secure]
+    address = ":443"
+
+[certificatesResolvers.letsencrypt.acme]
+  # LetsEncrypt Staging Server
+  # caServer = "https://acme-staging-v02.api.letsencrypt.org/directory"
+  email = "devs@reedu.de"
+  storage = "/letsencrypt/acme.json"
+  httpchallenge = true
+  [certificatesResolvers.letsencrypt.acme.httpChallenge]
+    # used during the challenge
+    entryPoint = "web"

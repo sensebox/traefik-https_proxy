@@ -2,6 +2,12 @@
 Simple HTTPS Proxy with Traefik &amp; LetsEncypt
 
 ## Usage
+
+First startup the proxy:
+```sh
+docker-compose up -d
+```
+
 To publish a service and make it available through `traefik` you have to attach [labels](https://doc.traefik.io/traefik/providers/docker/#routing-configuration) to your container or service.
 
 Docker-Compose Example:

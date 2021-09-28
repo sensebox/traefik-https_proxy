@@ -1,3 +1,9 @@
+# See link for static configuration
+# https://doc.traefik.io/traefik/reference/static-configuration/file/
+[global]
+  checkNewVersion = true
+  sendAnonymousUsage = false
+
 [providers.docker]
   endpoint = "tcp://socket-proxy:2375"
   exposedByDefault = false

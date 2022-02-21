@@ -3,6 +3,11 @@ Simple HTTPS Proxy with Traefik &amp; LetsEncypt
 
 ## Usage
 
+Clone the repo as https_proxy
+```sh
+git clone https://github.com/sensebox/traefik-https_proxy.git https_proxy
+```
+
 First startup the proxy:
 ```sh
 docker-compose up -d
